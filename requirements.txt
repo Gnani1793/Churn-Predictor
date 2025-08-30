@@ -1,0 +1,8 @@
+streamlit>=1.18
+streamlit-lottie
+pandas
+numpy
+scikit-learn
+plotly
+requests
+xgboost  # optional but recommended; remove if causing install issues on Render

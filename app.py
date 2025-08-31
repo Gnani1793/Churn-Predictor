@@ -326,7 +326,8 @@ with tab_train:
                     # candidate models
                     candidates = {
                         "Logistic Regression": LogisticRegression(max_iter=1000),
-                        "Random Forest": RandomForestClassifier(n_estimators=int(rf_estimators), random_state=int(random_state)),
+                        "Random Forest": RandomForestClassifier(n_estimators=int(rf_estimators), random_state=int(random_state),class_weight="balanced"),
+                        
                     }
                     if XGB_AVAILABLE:
                         candidates["XGBoost"] = XGBClassifier(use_label_encoder=False, eval_metric="logloss", random_state=int(random_state))
@@ -484,3 +485,4 @@ with tab_sql:
 # ----------------------------
 st.markdown("---")
 st.markdown("Gnanananda Dharmana        contact me at :gnani1744@gmail.com")
+
